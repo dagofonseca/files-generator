@@ -4,6 +4,8 @@ jobs:
   greeting:
     runs-on: unbuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@v3
       - name: Print user
         run: echo "This is the user ${{ github.actor }}"
       - name: Set node
