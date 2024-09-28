@@ -4,9 +4,11 @@ jobs:
   greeting:
     runs-on: unbuntu-latest
     steps:
-      - name: hello greeting
-      - uses: actions/setup-node@v4
+      - name: Print user
+        run: echo "This is the user ${{ github.actor }}"
+      - name: Set node
+        uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Run index
+      - name: Run js file
         run: node greeting.js
