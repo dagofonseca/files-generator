@@ -1,0 +1,12 @@
+name: hola-mundo
+on: [push]
+jobs:
+  greeting:
+    runs-on: unbuntu-latest
+    steps:
+      - name: hello greeting
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Run index
+        run: node greeting.js
